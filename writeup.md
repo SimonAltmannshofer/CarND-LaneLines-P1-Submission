@@ -44,6 +44,7 @@ The shortcomings of the solution are:
 ### 3. Suggest possible improvements to your pipeline
 
 Improvements to the pipeline are:
-- fit a polynomial or clothoid function to the data
-- Use a robust least squares algorithm to merge the hough transforms into a lane instead of averaging the houg lines
+- fit a curve to the image instead of a straight line
+- Use a robust algorithm (like RANSAC or M-Estimators) to merge the hough transforms into a lane instead of averaging the houg lines
+- Use information from an additional sensor, e.g. infrared camera
 - As lane markings do not disapear in a fraction of seconds, I would use the found lane marking from the previous frame to calculate the current lane marking position
